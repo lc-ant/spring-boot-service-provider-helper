@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.lecousin.ant</groupId>
+		<artifactId>lc-ant-spring-boot-parent-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>lc-ant-spring-boot-service-provider-helper</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<lc-ant-core-spring-boot-.version>0.0.1-SNAPSHOT</lc-ant-core-spring-boot-.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.lecousin.ant</groupId>
+			<artifactId>lc-ant-core-spring-boot-service-provider</artifactId>
+			<version>${lc-ant-core-spring-boot-.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.lecousin.ant.service</groupId>
+			<artifactId>lc-ant-service-tenant</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>net.lecousin.ant.service</groupId>
+			<artifactId>lc-ant-service-security</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>net.lecousin.ant.connector</groupId>
+			<artifactId>lc-ant-connector-database</artifactId>
+			<version>${project.version}</version>
+			<optional>true</optional>
+		</dependency>
+
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/lc-ant/parent</url>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/lc-ant/spring-boot-service-provider-helper</url>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+	</distributionManagement>
+</project>
